@@ -38,3 +38,27 @@ variable "public_subnet_cidr_block_1b" {
 variable "public_subnet_cidr_block_1c" {
   default = "10.10.160.0/19"
 }
+
+variable "node_group_count" {
+  default = "3"
+}
+
+variable "instancetype" {
+  default = {
+    0 = ["t2.small", "t2.micro"]
+    1 = ["t3.small", "t3.micro"]
+    2 = ["t2.small", "t2.micro"]
+  }
+}
+
+variable "scalemin" {
+  default = "1"
+}
+
+variable "scalemax" {
+  default = "5"
+}
+
+variable "scaledesired" {
+  default = "1"
+}
